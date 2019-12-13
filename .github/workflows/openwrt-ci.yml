@@ -102,11 +102,19 @@ jobs:
           # 
 
           # 编译x64固件:
+          # cat >> .config <<EOF
+          # CONFIG_TARGET_x86=y
+          # CONFIG_TARGET_x86_64=y
+          # CONFIG_TARGET_x86_64_Generic=y
+          # EOF
+          
+          # 编译GL-iNet GL-MT300N-V2固件： 
           cat >> .config <<EOF
-          CONFIG_TARGET_x86=y
-          CONFIG_TARGET_x86_64=y
-          CONFIG_TARGET_x86_64_Generic=y
+          CONFIG_TARGET_gl-mt300n-v2=y
+          CONFIG_TARGET_mt76x8=y
+          CONFIG_TARGET_mt7628an-soc=y
           EOF
+
 
           # 固件压缩:
           cat >> .config <<EOF
