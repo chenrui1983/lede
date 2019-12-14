@@ -110,9 +110,9 @@ jobs:
           
           # 编译GL-iNet GL-MT300N-V2固件： 
           cat >> .config <<EOF
-          CONFIG_TARGET_gl-mt300n-v2=y
-          CONFIG_TARGET_mt76x8=y
-          CONFIG_TARGET_mt7628an-soc=y
+          CONFIG_TARGET_ramips=y
+          CONFIG_TARGET_ramips_mt76x8=y
+          CONFIG_TARGET_ramips_mt76x8_DEVICE_glinet_gl-mt300n-v2=y
           EOF
 
 
